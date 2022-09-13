@@ -21,6 +21,7 @@ pipeline {
             steps {
                 sh 'python3 -m pytest ./main/tests/test_unit.py'
             }
+        }
         stage('Build') {
             steps {
                 sh 'sudo docker-compose build'
