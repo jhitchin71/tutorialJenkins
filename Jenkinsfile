@@ -30,9 +30,10 @@ pipeline {
         }
         stage('Deploying') {
             steps {
-                sh 'sudo ssh -i /home/ubuntu/.ssh/JH_912 -o StrictHostKeyChecking=no ubuntu@172.31.2.230'
+                sh '''sudo ssh -i /home/ubuntu/.ssh/JH_912 -o StrictHostKeyChecking=no ubuntu@172.31.2.230
                 //sudo apt install apache2 -y
-            }
+                    '''
+              }
         }
     }
 }
