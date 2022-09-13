@@ -25,6 +25,12 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'sudo docker-compose build'
+                
+             }
+        }
+        stage('Deploying') {
+            steps {
+             sh 'ssh -i /home/jenkins/.ssh/JH_912 -o StrictHostKeyChecking=no ubuntu@3.9.12.7'
             }
         }
     }
