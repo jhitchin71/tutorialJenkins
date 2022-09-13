@@ -35,7 +35,7 @@ pipeline {
                       sudo ssh -i /home/ubuntu/.ssh/JH_912 -o StrictHostKeyChecking=no ubuntu@172.31.2.230
                       sudo apt install apache2 -y
                       cd /home/ubuntu/tutorialJenkins/
-                      docker -compose down
+                      docker-compose down
                       docker system prune -a -f
                       docker-compose up -d
                       << EOF
