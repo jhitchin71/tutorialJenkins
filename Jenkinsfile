@@ -17,6 +17,10 @@ pipeline {
                 sh 'python3 -m pytest ./prime/tests/test_unit.py'
             }
         }
+        stage('Integration Test') {
+            steps {
+                sh 'python3 -m pytest ./main/tests/test_unit.py'
+            }
         stage('Build') {
             steps {
                 sh 'sudo docker-compose build'
