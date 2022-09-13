@@ -36,7 +36,7 @@ pipeline {
                       sudo apt install apache2 -y
                       cd /home/ubuntu/tutorialJenkins/
                       docker-compose down
-                      docker system prune -a -f
+                      //docker system prune -a -f
                       docker-compose up -d
                       << EOF
                     '''
