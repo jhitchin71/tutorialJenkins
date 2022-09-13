@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Deploying') {
             steps {
-             sh 'ssh -i /home/ubuntu/.ssh/JH_912 -o StrictHostKeyChecking=no ubuntu@3.9.12.7'
+             sh 'sudo ssh -i /home/jenkins/.ssh/JH_912 -o StrictHostKeyChecking=no ubuntu@172.31.2.230'
             }
         }
     }
